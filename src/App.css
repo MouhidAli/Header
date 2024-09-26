@@ -1,38 +1,199 @@
-.App {
-  text-align: center;
+.trip-header {
+  background-color: #1e47ef; /* Example Trip.com blue */
+  color: white; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  max-width: 1200px; /* Adjust container width as needed */
+  margin: 0 auto;
+  padding: 8px; 
   display: flex;
-  flex-direction: column;
+  align-items: center; 
+  justify-content: space-between; 
+}
+
+.logo {
+  height: 40px;
+  margin-top: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.search-bar {
+  position: relative;
+  display: inline-block;
+ 
+}
+
+.search-bar input {
+  height: 15px;
+  width: 280px;
+  padding: 8px;
+  outline: none;
+  border: 1px solid #ccc; 
+  border-radius: 3px;
+}
+
+.search-bar button {
+  height: 28.5px;
+  width: 32px;
+  position: absolute;
+  margin: 2px 2px ;
+  right: 0px;
+  top: 0px;
+  background-color: #3264ff;    
+  border: none;
+  color: white; 
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 3px;
+}
+
+.list{
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  cursor: pointer;
+  float: left;
+  font-size: 14px;
+  height: 20px;
+  line-height: 18px;
+  text-decoration: none;
+  border: 8px solid #1e47ef;
+  
+  
+  
+}
+
+.list:hover {
+  gap: 0px;
+  color: #fff;
+  background-color: #637df3;
+  text-decoration: none;
+  border: 8px solid #637df3;
+  border-radius: 3px;
+}
+
+
+
+
+
+.flag{
+    height: 23px;
+    width: 30px;
+    border-radius: 2px;
+    margin-top: 3px;
+    border: 6px solid #1e47ef;
+}
+
+.flag:hover{
+  cursor: pointer;
+  background-color: #637df3;
+  border-radius: 2px;
+  border: 6px solid #637df3;
+}
+
+.main-nav ul, .user-actions, .sub-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+
+
+.currency{
+  line-height: 25px;
+  margin-left: 25px;
+  cursor: pointer;
+  padding: 8px;
+  font-size: 14px;
+  font-family:  Helvetica, Arial, sans-serif;
+
+}
+
+.currency:hover{
+  color: #fff;
+  background-color: #637df3;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.search-bookings{
+  background: hsla(0, 0%, 100%, .3);
+  color: #fff;
+ border: none;
+  border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    height: 35px;
+    line-height: 18px;
+   font-family: Helvetica, Arial, sans-serif;;
+}
+
+.search-bookings:hover{
+  cursor: pointer;
+  background-color: #fff;
+  color: #6188ff;
+}
+
+.sign-in{
+  background-color: #fff;
+  color: #0f294d;
+  font-weight: 600;
+    padding: 8px;
+    height: 34px;
+    margin: 0 4px;
+    border-radius: 4px;
+    border: 2px solid white;
+    font-family:  Helvetica, Arial, sans-serif;
+}
+
+.sign-in:hover{
+  color: #3466ff;
+  cursor: pointer;
+}
+
+.main-nav li, .user-actions > *, .sub-nav li {
+  margin-left: 20px; 
+}
+
+.secondary-nav{
+  margin-top: -20px;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: left;
 }
 
-.App-link {
-  color: #61dafb;
+.secondary-nav ul li {
+  list-style: none; 
+  display: inline-block;
+  margin: 0px 25px;
+  margin-left: 9px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.secondary-nav ul li a{
+  font-size: 16px;
+  color: #d3dbfe;
+  text-decoration: none;
+  transition: 0.3s all;
 }
+
+.secondary-nav ul li a:hover{
+  color: #ffffff;
+}
+
+.hover-line::after{
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color:#ffffff ;
+  transition: width .3;
+}
+
+.hover-line:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+
