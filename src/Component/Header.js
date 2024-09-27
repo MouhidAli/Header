@@ -2,7 +2,6 @@ import React from 'react';
 import '../App.css'
 import logo from '../Component/img/logo.png'
 import flag from '../Component/img/flag.png'
-// import PageviewRoundedIcon from '@mui/icons-material/PageviewRounded';
 import icon from '../Component/img/icoon.png'
 
 
@@ -14,7 +13,7 @@ function Header() {
 
         <div className="search-bar">
           <input type="text" placeholder="Destination, attraction, hotel, etc" /> 
-          <button type="submit"> <img src={icon} style={{height:'23px', width:'23px'}} alt='icon'></img></button> 
+          <button type="submit"> <img src={icon} style={{height:'23px', width:'23px'}} alt='icon' className='search-icon'></img></button> 
         </div>
 
         <nav className="main-nav">

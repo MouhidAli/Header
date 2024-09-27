@@ -1,15 +1,17 @@
 .trip-header {
-  background-color: #1e47ef; /* Example Trip.com blue */
-  color: white; 
+  background-color: #1e47ef; /* Trip.com blue */
+  color: white;
+  /* padding: 10px 0; */
 }
 
 .container {
-  max-width: 1200px; /* Adjust container width as needed */
+  max-width: 94.5%;
   margin: 0 auto;
-  padding: 8px; 
+  padding: 8px;
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 .logo {
@@ -22,7 +24,6 @@
 .search-bar {
   position: relative;
   display: inline-block;
- 
 }
 
 .search-bar input {
@@ -30,26 +31,28 @@
   width: 280px;
   padding: 8px;
   outline: none;
-  border: 1px solid #ccc; 
+  border: 1px solid #ccc;
   border-radius: 3px;
+  margin-right: 179px;
 }
 
 .search-bar button {
   height: 28.5px;
   width: 32px;
   position: absolute;
-  margin: 2px 2px ;
+  margin: 2px 2px;
   right: 0px;
   top: 0px;
-  background-color: #3264ff;    
+  background-color: #3264ff;
   border: none;
-  color: white; 
+  color: white;
   cursor: pointer;
   padding: 2px 4px;
   border-radius: 3px;
+  margin-right: 181px;
 }
 
-.list{
+.list {
   color: #fff;
   font-family: Helvetica, Arial, sans-serif;
   cursor: pointer;
@@ -59,33 +62,24 @@
   line-height: 18px;
   text-decoration: none;
   border: 8px solid #1e47ef;
-  
-  
-  
 }
 
 .list:hover {
-  gap: 0px;
   color: #fff;
   background-color: #637df3;
-  text-decoration: none;
   border: 8px solid #637df3;
   border-radius: 3px;
 }
 
-
-
-
-
-.flag{
-    height: 23px;
-    width: 30px;
-    border-radius: 2px;
-    margin-top: 3px;
-    border: 6px solid #1e47ef;
+.flag {
+  height: 23px;
+  width: 30px;
+  border-radius: 2px;
+  margin-top: 3px;
+  border: 6px solid #1e47ef;
 }
 
-.flag:hover{
+.flag:hover {
   cursor: pointer;
   background-color: #637df3;
   border-radius: 2px;
@@ -99,66 +93,61 @@
   display: flex;
 }
 
-
-
-.currency{
+.currency {
   line-height: 25px;
   margin-left: 25px;
   cursor: pointer;
   padding: 8px;
   font-size: 14px;
-  font-family:  Helvetica, Arial, sans-serif;
-
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.currency:hover{
+.currency:hover {
   color: #fff;
   background-color: #637df3;
   text-decoration: none;
   border-radius: 3px;
 }
 
-.search-bookings{
+.search-bookings {
   background: hsla(0, 0%, 100%, .3);
   color: #fff;
- border: none;
+  border: none;
   border-radius: 4px;
-    box-sizing: border-box;
-    font-size: 14px;
-    font-weight: 400;
-    height: 35px;
-    line-height: 18px;
-   font-family: Helvetica, Arial, sans-serif;;
+  font-size: 14px;
+  height: 35px;
+  line-height: 18px;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.search-bookings:hover{
+.search-bookings:hover {
   cursor: pointer;
   background-color: #fff;
   color: #6188ff;
 }
 
-.sign-in{
+.sign-in {
   background-color: #fff;
   color: #0f294d;
   font-weight: 600;
-    padding: 8px;
-    height: 34px;
-    margin: 0 4px;
-    border-radius: 4px;
-    border: 2px solid white;
-    font-family:  Helvetica, Arial, sans-serif;
+  padding: 8px;
+  height: 34px;
+  margin: 0 4px;
+  border-radius: 4px;
+  border: 2px solid white;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-.sign-in:hover{
+.sign-in:hover {
   color: #3466ff;
   cursor: pointer;
 }
 
 .main-nav li, .user-actions > *, .sub-nav li {
-  margin-left: 20px; 
+  margin-left: 20px;
 }
 
-.secondary-nav{
+.secondary-nav {
   margin-top: -20px;
   display: flex;
   align-items: center;
@@ -166,34 +155,60 @@
 }
 
 .secondary-nav ul li {
-  list-style: none; 
+  list-style: none;
   display: inline-block;
   margin: 0px 25px;
   margin-left: 9px;
 }
 
-.secondary-nav ul li a{
+.secondary-nav ul li a {
   font-size: 16px;
   color: #d3dbfe;
   text-decoration: none;
   transition: 0.3s all;
 }
 
-.secondary-nav ul li a:hover{
+.secondary-nav ul li a:hover {
   color: #ffffff;
 }
 
-.hover-line::after{
+.hover-line::after {
   content: '';
   display: block;
   width: 0%;
   height: 2px;
-  background-color:#ffffff ;
-  transition: width .3;
+  background-color: #ffffff;
+  transition: width 0.3s;
 }
 
-.hover-line:hover::after{
+.hover-line:hover::after {
   width: 100%;
-  transition: width .3s;
+  transition: width 0.3s;
 }
 
+@media  ( max-width: 1300px){
+ .container{
+  max-width: 94%;
+ } 
+ .search-bar{
+  margin-right: -195px;
+  margin-left: -12px;
+ }
+
+ .main-nav,.flag,.currency,.search-bookings,.sign-in{
+  margin-right: -10px;
+  
+ }
+
+ .main-nav{
+  margin-left: 80px;
+ }
+ 
+ 
+
+ 
+}
+
+
+
+  
